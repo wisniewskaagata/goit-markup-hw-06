@@ -536,6 +536,52 @@ font-size: 18px;
     visibility: hidden;
     pointer-events:none;
 }
+.modal-text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--dark);
+        padding-top: 40px;
+        padding-bottom: 12px;
+}
+.name-input {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--grey);
+        padding-bottom: 4px;
+        margin-left: 40px;
+}
+.place-input {
+    margin-left: 40px;
+    margin-bottom: 10px;
+        width: 448px;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+}
+.comment-input {
+        width: 448px;
+        height: 120px;
+        margin-left: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin-bottom: 20px;
+}
+.privacy {
+    margin-bottom: 30px;
+    margin-left: 77px;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--grey);
+}
+.button-form {
+    margin-bottom: 40px;
+    margin-left: 164px;
+}
 .sign-email {
     margin-left: 68px;
     background-color: var(--second);
