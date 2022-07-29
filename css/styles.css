@@ -188,10 +188,8 @@ body {
     background: var(--blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    padding-left: 42px;
-    padding-right: 41px;
-    padding-top: 10px;
-    padding-bottom: 10px; 
+    width: 200px;
+    height: 50px;
     border: none;
     margin-bottom: 114px;
 }
@@ -537,4 +535,14 @@ font-size: 18px;
     opacity:0;
     visibility: hidden;
     pointer-events:none;
+}
+.sign-email {
+    margin-left: 68px;
+    background-color: var(--second);
+    padding: 16px 15px;
+    width:358px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
 }
