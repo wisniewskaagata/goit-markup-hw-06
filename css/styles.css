@@ -382,6 +382,9 @@ body {
     fill: var(--white);
     padding-left: 70px;
 }
+.sign-in{
+    margin-left: 24px;
+}
 .background {
     padding: 94px;
 }
@@ -569,14 +572,22 @@ font-size: 18px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
         margin-bottom: 20px;
+        padding:16px 12px;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
 }
 .privacy {
     margin-bottom: 30px;
-    margin-left: 77px;
+    margin-left: 55px;
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
         color: var(--grey);
+}
+.check{
+ margin-right: 9px;
 }
 .button-form {
     margin-bottom: 40px;
