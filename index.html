@@ -258,8 +258,10 @@
       <h3 class="invitation">ZAPISZ SIĘ DO NEWSLETTERA</h3>
       <form>
         <label>
-          <input class="sign-email" type="email" name="email" placeholder="E-mail"/>
-          <button class="service" type="Zapisz się">Zapisz się</button>
+          <input class="sign-email" type="email" name="email"placeholder="E-mail"/>
+          <button class="service" type="Zapisz się">Zapisz się<svg width="24" height="24">
+            <use href="./images/sprite.svg#icon-icon-send"></use>
+          </svg></button>
         </label>
       </form>
     </div>
@@ -288,10 +290,10 @@
           </label>
           <label>
             <p class="name-input">Komentarz</p>
-            <input class="comment-input" type="email" name="email" placeholder="Wprowadź tekst" />
+            <textarea class="comment-input" name="feedback" rows="5" placeholder="Wprowadź tekst"></textarea>
           </label>
           <label>
-           <p class="privacy">Oświadczam iż akceptuję Regulamin i Politykę Prywatności</p>
+          <input type="checkbox" name="hobby" value="music" checked /><p class="privacy">Oświadczam iż akceptuję Regulamin i Politykę Prywatności</p>
           </label>
           <button class="service button-form" type="Zapisz się">Wyślij</button>
         </form>
