@@ -23,6 +23,7 @@
     --end: rgba(255, 255, 255, 0.6);
     --socialmedia: rgba(255, 255, 255, 0.1);
     --label: rgba(47, 48, 58, 0.8);
+    --modal: rgba(117, 117, 117, 0.5);
 }
 body {
     width: 1600px;
@@ -407,7 +408,8 @@ font-weight: 700;
     width: 200px;
     height: 50px;
     border: none;
-    position:relative;
+    position:absolute;
+    margin-bottom: 104px;
 }
 .background {
     padding: 94px;
@@ -494,11 +496,11 @@ font-size: 18px;
     background: var(--blue);
     position: absolute;
     padding: 49px 45px 49px 24px;
-    top:0;
+    top: 0;
         left: 0;
         height: 100%;
-   margin-bottom: 110px;
-    transform: translatey(100%);
+        margin-bottom: 110px;
+        transform: translatey(100%);
     transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -527,9 +529,13 @@ font-size: 18px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius:4px;
     }
-.modal-form:hover{
-fill: var(--blue);
-    cursor: pointer;
+
+input:focus+.icon-people,
+input:focus+.icon-telephone,
+input:focus+.icon-envelope,
+textarea, input {
+    fill: var(--blue);
+    outline-color: var(--blue);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -556,7 +562,7 @@ fill: var(--blue);
             width: 30px;
             height: 30px;
 }
-.modal-button:hover {
+.modal-button:hover{
     border: 1px solid var(--blue);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
@@ -570,7 +576,7 @@ fill: var(--blue);
     visibility: hidden;
     pointer-events:none;
 }
-.modal-text {
+.first-modal-text {
         font-weight: 700;
         font-size: 20px;
         line-height: 1.15;
@@ -604,21 +610,82 @@ fill: var(--blue);
         border-radius: 4px;
         margin-bottom: 20px;
         padding:16px 12px;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 0.01em;
-            color: rgba(117, 117, 117, 0.5);
 }
-.privacy {
-    margin-bottom: 30px;
-    margin-left: 55px;
+.text-area{
+    font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: var(--modal);
+}
+.rules-policy{
+    color: var(--blue);
+        text-decoration: underline;
+        font-weight: 400;
         font-size: 14px;
-        line-height: 1.71;
         letter-spacing: 0.03em;
-        color: var(--grey);
+        line-height: 1.71;
 }
-.check{
- margin-right: 9px;
+.checkbox-window {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-window input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    top: 4px;
+    left: 63px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: var(--white);
+        border: 2px solid black;
+        position: absolute;
+        width:15px;
+        height:16px;
+}
+.checkbox-icon {
+    height: 16px;
+    width: 15px;
+    visibility: hidden;
+    fill: var(--white);
+}
+.checkbox-window input:checked~.checkmark .checkbox-icon {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 2px;
+        visibility: visible;
+        position: absolute;
+        top: -2px;
+            left: -2px;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    line-height: 1.71px;
+    letter-spacing: 0.03em;
+    color: var(--grey);
+    margin-left: 88px;
+    cursor: default;
+}
+
+.modal-checkbox-link {
+    color: var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal-text {
+    font-size: 14px;
+    line-height: 1.71px;
+    letter-spacing: 0.03em;
+    color: var(--grey);
+    margin-top: 25px;
+    margin-left: 88px;
+    cursor: default;
 }
 .icon-people {
     color: var(--black);
@@ -639,8 +706,22 @@ fill: var(--blue);
     top: 243px;
 }
 .button-form {
-    margin-bottom: 40px;
-    margin-left: 164px;
+    font-weight: 700;
+        font-size: 16px;
+        line-height: 1.85;
+        letter-spacing: 0.06em;
+        color: var(--white);
+        background-color: var(--blue);
+        cursor: pointer;
+        background: var(--blue);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        width: 200px;
+        height: 50px;
+        border: none;
+        margin-top: 30px;
+        margin-left: 164px;
+        margin-bottom: 40px;
 }
 .sign-email {
     margin-left: 68px;
